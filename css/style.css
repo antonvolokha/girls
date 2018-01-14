@@ -322,3 +322,10 @@ p {
   border-top: #eee solid 1px;
   text-align: right;
 }
+
+.center {
+  margin: auto;
+  position: absolute;
+  top: calc(50% / 2);
+  bottom: calc(50% / 2);
+}

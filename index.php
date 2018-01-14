@@ -1,6 +1,7 @@
 <?php
   $message_ua = 'Ти Чарівна, сліпуча і неповторна дівчина. Тобою наповнені всі мої думки і бажання! Ти надихаєш творити красу та робити цей унилий світ краще.';
   $message_ru = '';
+  $message_en = '';
 
   $name = '';
   $lng = 'ua';
@@ -16,6 +17,10 @@
     $message = $message_ua;
   else if ($lng == 'ru')
     $message = $message_ru;
+  else if ($lng == 'en')
+    $message = $message_en;
+  else
+    $message = $message_ua;
 ?>
 <html>
   <head>
@@ -38,6 +43,13 @@
 
       ga('create', 'UA-97470161-1', 'auto');
       ga('send', 'pageview');
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $('.cbalink').remove();
+        $('.cumf_bt_form_wrapper').remove();
+      });
     </script>
 
   </head>
