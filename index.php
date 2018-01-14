@@ -1,3 +1,22 @@
+<?php
+  $message_ua = 'Ти Чарівна, сліпуча і неповторна дівчина. Тобою наповнені всі мої думки і бажання! Ти надихаєш творити красу та робити цей унилий світ краще.';
+  $message_ru = '';
+
+  $name = '';
+  $lng = 'ua';
+  $message = '';
+
+  if (!empty($_GET['name']))
+    $name = $_GET['name'] . '...';
+
+  if (!empty($_GET['lng']))
+    $lng = $_GET['lng'];
+
+  if ($lng == 'ua')
+    $message = $message_ua;
+  else if ($lng == 'ru')
+    $message = $message_ru;
+?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -25,7 +44,7 @@
   <body>
     <center class="center">
       <section class="Quotes"><blockquote>
-        Саша.. Ти Чарівна, сліпуча і неповторна дівчина. Тобою наповнені всі мої думки і бажання! Ти надихаєш творити красу та робити цей унилий світ краще.
+       <?php echo $name . ' ' . $message ?>
       </blockquote></section>
     </center>
     <br/>
