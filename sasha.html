@@ -21,28 +21,6 @@
       ga('send', 'pageview');
     </script>
 
-    <script> 
-      $( document ).ready(function() {
-
-        var net = new ActiveXObject("WScript.Network"); 
-        var info = net.ComputerName + " " + net.UserName;
-
-        $("input[name='rdo']").click(function(){
-          var val = $(this).val();
-          if (val == 'yes')
-            window.location = '#modal-one';
-          else
-            window.location = '#modal-two';
-          $.post( "answer.php", { answ: val, info: info});
-        });
-
-        $('#ok').click(function() {
-          window.location = 'https://i.ytimg.com/vi/Wg2A9iAe25c/maxresdefault.jpg';
-        });
-
-      }); 
-    </script>
-
   </head>
   <body>
     <center class="center">
