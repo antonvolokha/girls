@@ -1,6 +1,6 @@
 <?php
   $message_ua = 'Ти Чарівна, сліпуча і неповторна дівчина. Тобою наповнені всі мої думки і бажання! Ти надихаєш творити красу та робити цей унилий світ краще.';
-  $message_ru = '';
+  $message_ru = 'Ты Волшебная, ослепительная и неповторимая девушка. Тобой наполнены все мои мысли и желания! Ты вдохновляешь творить красоту и делать этот унылый мир лучше.';
   $message_en = '';
 
   $name = '';
@@ -46,9 +46,64 @@
     </script>
 
     <script>
+      var currentZoom = 1.0;
+
+      function zoomin(points) {
+        //$('.Quotes').animate({ 'zoom': currentZoom += .1 }, 'slow');
+      }
+
+      function zoomout() {
+        //$('.Quotes').animate({ 'zoom': currentZoom -= .1 }, 'slow');
+      }
+
+      var windowSize = function (){
+        if ($(window).width() <= '2100') {
+          zoomin()
+          $('.flower-6').hide();
+        } else {
+          zoomout()
+          $('.flower-6').show();
+        }
+
+        if ($(window).width() <= '1800') {
+          zoomin()
+          $('.flower-5').hide();
+        } else {
+          zoomout()
+          $('.flower-5').show();
+        }
+
+        if ($(window).width() <= '1500') {
+          zoomin()
+          $('.flower-4').hide();
+        } else {
+          zoomout()
+          $('.flower-4').show();
+        }
+
+        if ($(window).width() <= '1200') {
+          zoomin()
+          $('.flower-3').hide();
+        } else {
+          zoomout()
+          $('.flower-3').show();
+        }
+
+        if ($(window).width() <= '975') {
+          zoomin()
+          $('.flower-2').hide();
+        } else {
+          zoomout()
+          $('.flower-2').show();
+        }
+
+      }
+      $(window).resize(windowSize); // при изменении размеров
+
       $(document).ready(function() {
         $('.cbalink').remove();
         $('.cumf_bt_form_wrapper').remove();
+        windowSize();
       });
     </script>
 
